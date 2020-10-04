@@ -4,7 +4,7 @@ const express = require('express')
 
 const app = express()
 const port = process.env.PORT || 3000
-const dir = 'build'
+const dir = process.env.BASE_PATH || '../build'
 const filePath = `${dir}/config.js`;
 
 function injectServer (server) {
